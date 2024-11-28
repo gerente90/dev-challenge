@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EcoTrack</title>
+</head>
+<body>
+    <header  style="margin-bottom: 30px;" class="header">
+      <div class="logo">
+        <img src="logo.png" alt="EcoTrack Logo">
+        <h1>EcoTrack</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="features.html">Características</a></li>
+          <li><a href="proyect.html">Proyecto</a></li>
+          <li><a href="join.html" class="btn-join">Únete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container-form">
+        <h1>Calculadora de Huella de Carbono</h1>
+        <form id="carbonFootprintForm">
+            <div class="form-group">
+                <label for="kmCar">Kilómetros recorridos por coche al mes:</label>
+                <input type="number" id="kmCar" placeholder="Introduce los kilómetros" required>
+            </div>
+            <div class="form-group">
+                <label for="electricity">Consumo mensual de electricidad (kWh):</label>
+                <input type="number" id="electricity" placeholder="Introduce el consumo de electricidad" required>
+            </div>
+            <div class="form-group">
+                <label for="meat">Consumo mensual de carne (kg):</label>
+                <input type="number" id="meat" placeholder="Introduce los kilos de carne" required>
+            </div>
+            <button type="submit">Calcular Huella de Carbono</button>
+        </form>
+    </div>
+    </section>
+  </body>
+</html>
