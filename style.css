@@ -73,7 +73,9 @@ body {
   
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    flex-direction: column; /* Esto hará que los botones se alineen en una columna */
+    gap: 20px; /* Espaciado entre los botones */
+
 }
   
 .btn {
