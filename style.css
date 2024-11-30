@@ -168,8 +168,8 @@ button:hover {
     position: absolute;
     top: 480px;
     left: 50%;
-    width: 45vw;
-    height: 45vw;
+    width: 55vw;
+    height: 55vw;
     background-color: whitesmoke;
     border-radius: 50%;
     z-index: -1;
