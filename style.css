@@ -222,6 +222,7 @@ button:hover {
 }
 
 .info-content h2 {
+    color: whitesmoke;
     font-size: 60px;
     font-weight: bold;
     margin: auto;
@@ -229,7 +230,7 @@ button:hover {
 }
 
 .info-content p {
-    color: #263238;
+    color: whitesmoke;
     font-size: 20px;
     margin: auto;
     text-align: center;
