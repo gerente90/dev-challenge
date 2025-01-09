@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="/public/style.css">
     <title>Únete</title>
 </head>
 <body>
     <header  style="margin-bottom: 30px;" class="header">
       <div class="logo">
-        <img src="logo.png" alt="Desafía y Salva Logo">
+        <img src="/public/logo.png" alt="Desafía y Salva Logo">
         <h1>Desafía y Salva</h1>
       </div>
       <nav>
@@ -24,7 +23,7 @@
     </header>
     <div class="container-form">
         <h1>ÚNETENOS</h1>
-        <form id="carbonFootprintForm">
+        <form id="carbonFootprintForm" action="/register" method="POST">
             <div class="form-group">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" placeholder="Introduce tu nombre" required>
@@ -34,12 +33,20 @@
                 <input type="text" id="lastname" placeholder="Introduce tu apellido" required>
             </div>
             <div class="form-group">
+              <label for="correo">Cédula:</label>
+              <input type="text" id="ruc" placeholder="Introduce número de cédula" required>
+            </div>
+            <div class="form-group">
+              <label for="correo">Número:</label>
+              <input type="text" id="number" placeholder="Introduce número de teléfono" required>
+            </div>
+            <div class="form-group">
                 <label for="correo">Correo electrónico:</label>
                 <input type="text" id="email" placeholder="Introduce tu correo electrónico" required>
             </div>
             <div class="form-group">
-              <label for="correo">Cédula:</label>
-              <input type="text" id="ruc" placeholder="Introduce número de cédula" required>
+              <label for="correo">Contraseña:</label>
+              <input type="text" id="password" placeholder="Escribe una Contraseña" required>
           </div>
             <button type="submit" id="save">Guardar</button>
         </form>

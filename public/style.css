@@ -112,7 +112,7 @@ p {
     background-color: #797171;
     border-radius: 100% 0 0 100%;
     z-index: -1;
-    background-image: url(/imagen.png);
+    background-image: url(/images/imagen.png);
     background-size: 90%;
     background-size: cover;
     background-repeat: no-repeat;
