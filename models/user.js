@@ -1,6 +1,16 @@
-const { identity } = require('lodash');
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('postgres://user:password@localhost:5432/database');
+require('dotenv').config();
+
+const sequelize = new Sequelize(
+  process.env.DB_DATABASE,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialect: 'postgres',
+  }
+);
 
 const User = sequelize.define('User', {
   name: {
@@ -12,16 +22,16 @@ const User = sequelize.define('User', {
     allowNull: false,
   },
   identity: {
-    type: DataTypes.INTEGER,
-    allowNull:false,
+    type: DataTypes.STRING,
+    allowNull: false,
   },
   number: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
     unique: true,
   },
   password: {

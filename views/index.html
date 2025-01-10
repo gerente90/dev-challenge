@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/public/style.css">
-  <title>Desafia y Salva</title>
+  <title>Desafía y Salva</title>
 </head>
-
 <body>
   <header class="header">
     <div class="logo">
@@ -20,110 +18,141 @@
         <li><a href="features.html">Características</a></li>
         <li><a href="info.html">Contáctanos</a></li>
         <li><a href="join.html" class="btn-join">Únete</a></li>
+        <li><a href="login.html" id="login-link" style="display: none;">Iniciar Sesión</a></li>
       </ul>
     </nav>
+    <div class="user-info">
+      <span id="user-name"></span>
+      <button id="logout-btn" style="display: none;">Cerrar sesión</button>
+    </div>
   </header>
-      <h2>PARTICIPA EN NUESTROS RETOS AMBIENTALES POR FABULOSOS PREMIOS</h2>
-      <p>Esta página va dirigida a retos ambientales en los cuales vas a poder unirte a diferentes tipos de retos en los
-        cuales puedes ganar diferentes premios gracias a tu ayuda a la comunidad.</p>
-      <div class="cards-container">
-        <div class="card-a">
-          <div class="card-body">
-            <h5 class="card-title">1. Transporte Público del Futuro: ¡Hazlo Posible!</h5>
-            <div class="card-image">
-              <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-        <div class="card-b">
-          <div class="card-body">
-            <h5 class="card-title">2. Muévete Sin Motor: La Revolución de la Movilidad Sostenible</h5>
-            <div class="card-image">
-              <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-        <div class="card-a">
-          <div class="card-body">
-            <h5 class="card-title">Desafío 3: Eficiencia Energética en Edificios Públicos y Privados</h5>
-            <div class="card-image">
-              <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-        <div class="card-b">
-          <div class="card-body">
-            <h5 class="card-title">4. Ciudades Verdes: La Revolución de la Reforestación Urbana</h5>
-            <div class="card-image">
-              <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-        <div class="card-a">
-          <div class="card-body">
-            <h5 class="card-title">5. Renovables al Rescate: Energía Sostenible para Todos</h5>
-            <div class="card-image">
-              <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-        <div class="card-b">
-          <div class="card-body">
-            <h5 class="card-title">6. Rumbo a un Mundo sin Desperdicio: Reciclaje y Reducción de Residuos</h5>
-            <div class="card-image">
-              <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-        <div class="card-a">
-          <div class="card-body">
-            <h5 class="card-title">7. Comer Verde: El Futuro de una Alimentación Sostenible</h5>
-            <div class="card-image">
-              <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-        <div class="card-b">
-          <div class="card-body">
-            <h5 class="card-title">8. Viajar con Conciencia: La Revolución del Turismo Sostenible</h5>
-            <div class="card-image">
-              <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-        <div class="card-a">
-          <div class="card-body">
-            <h5 class="card-title">9. Educar para el Futuro: Capacitación en Sostenibilidad</h5>
-            <div class="card-image">
-              <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-        <div class="card-b">
-          <div class="card-body">
-            <h5 class="card-title">10. Hacia un Futuro Verde: Impulsa tu Proyecto Innovador</h5>
-            <div class="card-image">
-              <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
-            </div>
-            <a href="rewards.html" class="btn btn-info">Más información</a>
-          </div>
-        </div>
-      </div>
-    <div class="semicircle"></div>
-    <footer class="footer">
-      <div class="footer-content">
-          <p>&copy; 2024 Desafía y Salva. All rights reserved.</p>
-      </div>
-    </footer>
-</body>
 
+  <main>
+    <h2>PARTICIPA EN NUESTROS RETOS AMBIENTALES POR FABULOSOS PREMIOS</h2>
+    <p>Esta página va dirigida a retos ambientales en los cuales vas a poder unirte a diferentes tipos de retos en los
+      cuales puedes ganar diferentes premios gracias a tu ayuda a la comunidad.</p>
+    <div class="cards-container">
+      <div class="card-a">
+        <div class="card-body">
+          <h5 class="card-title">1. Transporte Público del Futuro: ¡Hazlo Posible!</h5>
+          <div class="card-image">
+            <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+      <div class="card-b">
+        <div class="card-body">
+          <h5 class="card-title">2. Muévete Sin Motor: La Revolución de la Movilidad Sostenible</h5>
+          <div class="card-image">
+            <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+      <div class="card-a">
+        <div class="card-body">
+          <h5 class="card-title">3. Eficiencia Energética en Edificios Públicos y Privados</h5>
+          <div class="card-image">
+            <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+      <div class="card-b">
+        <div class="card-body">
+          <h5 class="card-title">4. Ciudades Verdes: La Revolución de la Reforestación Urbana</h5>
+          <div class="card-image">
+            <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+      <div class="card-a">
+        <div class="card-body">
+          <h5 class="card-title">5. Renovables al Rescate: Energía Sostenible para Todos</h5>
+          <div class="card-image">
+            <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+      <div class="card-b">
+        <div class="card-body">
+          <h5 class="card-title">6. Rumbo a un Mundo sin Desperdicio: Reciclaje y Reducción de Residuos</h5>
+          <div class="card-image">
+            <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+      <div class="card-a">
+        <div class="card-body">
+          <h5 class="card-title">7. Comer Verde: El Futuro de una Alimentación Sostenible</h5>
+          <div class="card-image">
+            <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+      <div class="card-b">
+        <div class="card-body">
+          <h5 class="card-title">8. Viajar con Conciencia: La Revolución del Turismo Sostenible</h5>
+          <div class="card-image">
+            <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+      <div class="card-a">
+        <div class="card-body">
+          <h5 class="card-title">9. Educar para el Futuro: Capacitación en Sostenibilidad</h5>
+          <div class="card-image">
+            <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+      <div class="card-b">
+        <div class="card-body">
+          <h5 class="card-title">10. Hacia un Futuro Verde: Impulsa tu Proyecto Innovador</h5>
+          <div class="card-image">
+            <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
+          </div>
+          <a href="rewards.html" class="btn btn-info">Más información</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Desafía y Salva. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = JSON.parse(localStorage.getItem('user'));
+      const userNameElement = document.getElementById('user-name');
+      const loginLink = document.getElementById('login-link');
+      const logoutButton = document.getElementById('logout-btn');
+
+      if (user) {
+        userNameElement.textContent = `Bienvenido, ${user.name}`;
+        logoutButton.style.display = 'inline-block';
+        loginLink.style.display = 'none';
+      } else {
+        userNameElement.textContent = '';
+        logoutButton.style.display = 'none';
+        loginLink.style.display = 'inline-block';
+      }
+
+      logoutButton.addEventListener('click', () => {
+        localStorage.removeItem('user');
+        window.location.href = '/index.html';
+      });
+    });
+  </script>
+</body>
 </html>

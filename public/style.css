@@ -135,7 +135,9 @@ p {
     background: #797171;
     padding: 20px;
     border-radius: 8px;
+    margin-bottom: 50px; /* Añade espacio extra debajo del formulario */
 }
+
 
 h1 {
     text-align: center;
@@ -349,11 +351,13 @@ button:hover {
     background-color: #1f2901;
     color: whitesmoke; 
     padding: 10px; 
-    position: fixed; 
+    position: relative; /* Cambiado de fixed a relative */
     left: 0;
     bottom: 0;
     width: 100%; 
+    margin-top: 20px; /* Añade margen superior para separación */
 }
+
 
 .footer-content p {
     font-size: 14px; 

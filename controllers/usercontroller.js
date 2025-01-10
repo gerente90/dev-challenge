@@ -12,15 +12,11 @@ const registerUser = async (req, res) => {
       return res.status(400).json({ error: 'Usuario ya existe' });
     }
 
-    if (!name || !lastname || !identity || !number || !email || !password) {
-        return res.status(400).json({ error: 'Todos los campos son obligatorios' });
-      }      
-
     // Hashear la contraseña
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Crear el nuevo usuario
-    const newUser = await User.create({
+    await User.create({
       name,
       lastname,
       identity,
@@ -29,21 +25,36 @@ const registerUser = async (req, res) => {
       password: hashedPassword,
     });
 
-    // Responder con el usuario creado
-    res.status(201).json({
-      message: 'Usuario registrado exitosamente',
-      user: {
-        id: newUser.id,
-        name: newUser.name,
-        email: newUser.email,
-      },
-    });
+    res.redirect('/login.html'); // Redirigir al login después del registro
   } catch (error) {
-    console.error(error);
+    console.error('Error al registrar el usuario:', error);
     res.status(500).json({ error: 'Error al registrar el usuario' });
   }
 };
 
-module.exports = {
-  registerUser,
+// Controlador para iniciar sesión
+const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({ where: { email } });
+    if (!user) {
+      return res.status(400).json({ error: 'Usuario no encontrado' });
+    }
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(400).json({ error: 'Contraseña incorrecta' });
+    }
+
+    res.json({
+      message: 'Inicio de sesión exitoso',
+      user: { id: user.id, name: user.name, email: user.email },
+    });
+  } catch (error) {
+    console.error('Error al iniciar sesión:', error);
+    res.status(500).json({ error: 'Error al iniciar sesión' });
+  }
 };
+
+module.exports = { registerUser, loginUser };
