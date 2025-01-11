@@ -14,11 +14,16 @@
     </div>
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="features.html">Características</a></li>
-        <li><a href="info.html">Contáctanos</a></li>
-        <li><a href="join.html" class="btn-join">Únete</a></li>
-        <li><a href="login.html" id="login-link" style="display: none;">Iniciar Sesión</a></li>
+        <li><a href="index">Inicio</a></li>
+        <li><a href="features">Características</a></li>
+        <li><a href="info">Contáctanos</a></li>
+        <li><a href="join">Únete</a></li>
+        <li><a href="login" class="btn-join" id="login-link" style="display: none;">Iniciar Sesión</a></li>
+        <% if (user && user.isSuperuser) { %>
+          <button class="btn-join">Crear Reto</button>
+        <% } %>
+        
+        
       </ul>
     </nav>
     <div class="user-info">
@@ -38,7 +43,7 @@
           <div class="card-image">
             <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
       <div class="card-b">
@@ -47,7 +52,7 @@
           <div class="card-image">
             <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
       <div class="card-a">
@@ -56,7 +61,7 @@
           <div class="card-image">
             <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
       <div class="card-b">
@@ -65,7 +70,7 @@
           <div class="card-image">
             <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
       <div class="card-a">
@@ -74,7 +79,7 @@
           <div class="card-image">
             <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
       <div class="card-b">
@@ -83,7 +88,7 @@
           <div class="card-image">
             <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
       <div class="card-a">
@@ -92,7 +97,7 @@
           <div class="card-image">
             <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
       <div class="card-b">
@@ -101,7 +106,7 @@
           <div class="card-image">
             <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
       <div class="card-a">
@@ -110,7 +115,7 @@
           <div class="card-image">
             <img src="/public/reward.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
       <div class="card-b">
@@ -119,7 +124,7 @@
           <div class="card-image">
             <img src="/public/reward2.png" alt="Imagen Desafío" class="img-fluid">
           </div>
-          <a href="rewards.html" class="btn btn-info">Más información</a>
+          <a href="rewards" class="btn btn-info">Más información</a>
         </div>
       </div>
     </div>
@@ -137,6 +142,7 @@
       const userNameElement = document.getElementById('user-name');
       const loginLink = document.getElementById('login-link');
       const logoutButton = document.getElementById('logout-btn');
+      const createRetoButton = document.querySelector('.btn-join');
 
       if (user) {
         userNameElement.textContent = `Bienvenido, ${user.name}`;
@@ -150,7 +156,8 @@
 
       logoutButton.addEventListener('click', () => {
         localStorage.removeItem('user');
-        window.location.href = '/index.html';
+        console.log('Usuario eliminado del localStorage');
+        window.location.href = 'index';
       });
     });
   </script>

@@ -38,6 +38,18 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  isSuperuser: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,  
+  },
 });
+
+sequelize.sync({ alter: true })  
+  .then(() => {
+    console.log("Modelo sincronizado con éxito");
+  })
+  .catch(error => {
+    console.error("Error al sincronizar el modelo:", error);
+  });
 
 module.exports = User;

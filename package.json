@@ -4,7 +4,8 @@
   "description": "**Desafía y Salva** está bien estructurado y enfocado en promover desafíos ambientales para involucrar a las comunidades en prácticas sostenibles. A continuación, se detalla el análisis de los principales archivos:",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
